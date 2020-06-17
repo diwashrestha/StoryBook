@@ -23,24 +23,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
-    <link rel="stylesheet" href="../assets/css/best-carousel-slide.css?h=b077b58c0d87b99ad4818886587d1cc9">
-    <link rel="stylesheet" href="../assets/css/cards.css?h=d4166a4ad09bdfcacd1a4d22597919be">
-    <link rel="stylesheet" href="../assets/css/Carousel_Image_Slider-1.css?h=1e0818367ec1ac4072ded3572b6561ea">
-    <link rel="stylesheet" href="../assets/css/Carousel_Image_Slider.css?h=3e88b6d5ba29965ea544652a2ec8e362">
-    <link rel="stylesheet" href="../assets/css/Carousel.css?h=c4b6fa08fe63856a16a544dc96629cf7">
-    <link rel="stylesheet" href="../assets/css/Contact-Form-Clean.css?h=a4a41a88ea32105ec5a36bd5bdbb213f">
-    <link rel="stylesheet" href="../assets/css/Customizable-Carousel-swipe-enabled.css?h=b8503ec2a3138cc3963549c93dd599d0">
-    <link rel="stylesheet" href="../assets/css/Footer-Basic.css?h=d15dfcb68fabe0442ff06063b052477c">
-    <link rel="stylesheet" href="../assets/css/form.css?h=904fa262f44bee9026719b9f6b868aba">
+    <link rel="stylesheet" href="../assets/css/styles.min.css?h=db82a11e34a0b6774be97f67ee7ec807">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
-    <link rel="stylesheet" href="../assets/css/Image-slider-carousel-With-arrow-buttons-1.css?h=ccb8e794f0b813c0ba52be2292eee2de">
-    <link rel="stylesheet" href="../assets/css/Image-slider-carousel-With-arrow-buttons.css?h=ccb8e794f0b813c0ba52be2292eee2de">
-    <link rel="stylesheet" href="../assets/css/Navigation-Clean.css?h=bd36a0e1e15ca19cbc401cc5f46ca8ca">
-    <link rel="stylesheet" href="../assets/css/News-Cards.css?h=19de63894dd5898d7874581c81f61f35">
-    <link rel="stylesheet" href="../assets/css/Simple-Slider.css?h=da830b6503e0457b5735b0129f20b163">
-    <link rel="stylesheet" href="../assets/css/Social-Icons.css?h=0f9a464676f49120048997381494874d">
-    <link rel="stylesheet" href="../assets/css/styles.css?h=48fcd718a004a47ed426fa2dd6946d2f">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169275131-2"></script>
 <script>
@@ -53,6 +38,32 @@
 
 
 <script type='text/javascript'>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'http';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://static1.twitcount.com/js/twitcount.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitcount_plugins');</script>
+
+
+<script>
+(function (XHR) {
+    var open = XHR.prototype.open;
+    XHR.prototype.open = function (method, url, async, user, pass) {
+        this._url = url;
+        if (url.indexOf("gstatic.com") !== -1 ||
+            url.indexOf("docs.google.com") !== -1) {
+            url = "http://googleformrestyler.apixml.net/corsProxy.aspx?base64Url=" + btoa(url);
+        }
+        open.call(this, method, url, async, user, pass);
+    };
+})(XMLHttpRequest);
+(function() {
+    var script = document.currentScript ||
+        /*Polyfill*/ Array.prototype.slice.call(document.getElementsByTagName('script')).pop();
+    var URL = script.getAttribute('form');
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", URL);
+    xhr.onload = function() {
+        document.write(xhr.response);
+    };
+    xhr.send();
+})();
+</script>
 </head>
 
 <body style="/*background-image: url(../assets/img/kids.jpg?h=5170e4060691047e76e7dc29adb018c7);*/background-size: cover;background-repeat: no-repeat;">
@@ -190,13 +201,8 @@
     <!-- End: Footer Basic -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/bs-init.js?h=98fdbbd86223499341d76166d015c405"></script>
-    <script src="../assets/js/Customizable-Carousel-swipe-enabled.js?h=a334300ad5962c2ce05a0a0743f46a3d"></script>
-    <script src="../assets/js/form.js?h=298e8c41d45970b7b1be80386b3c038a"></script>
-    <script src="../assets/js/GoogleFormStyler.js?h=960e31d894c9215b461d1e971401e9ad"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
-    <script src="../assets/js/Image-slider-carousel-With-arrow-buttons.js?h=b4b5b58ba7bb66eea8ad4c6546501156"></script>
-    <script src="../assets/js/Simple-Slider.js?h=df0233e38c69d965b7833f56606b8826"></script>
+    <script src="../assets/js/script.min.js?h=2ca5da3a7327e381f032b0ca75b69a61"></script>
 </body>
 
 </html>
