@@ -170,7 +170,26 @@
         </div>
         <!-- End: Slideshow -->
     </div>
-    <!-- End: Simple Slider -->
+    <!-- End: Simple Slider -->    <script type="text/javascript">
+        function showHide() {
+          var div = document.getElementById("form_div");
+          var div2 = document.getElementById("hidden_msg");
+          if (div.style.display == '') {
+            div.style.display = 'none';
+          }
+          if(div2.style.display=="none"){
+              div2.style.display = '';
+          }
+        }
+       </script>
+       
+   
+   
+   <script type="text/javascript">
+       var submitted=false;</script>
+   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
+           onload= "if(submitted)  {style= display:solid;}"></iframe>
+
     <!-- Start: 1 Row 1 Column -->
     <div class="text-center border rounded border-white shadow-sm" id="hidden_msg" style="max-width: 600px;padding-left: 2em;padding-right: 2em;margin: auto;margin-bottom: 2em;display: none;">
         <div class="container text-center">
